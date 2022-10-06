@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap');
 :root{
 --cyan: hsl(179, 62%, 43%);
 --bright_yellow: hsl(71, 73%, 54%);
 --light_gray: hsl(204, 43%, 93%);
 --grayish_blue:hsl(218, 22%, 67%);
   font-size: 16px;
+  font-weight:100;
 }
 *{
     box-sizing:border-box;
@@ -12,5 +13,125 @@
     padding:0;
 }
 body{
-    font-family: 'Karla', sans-serif;
+    font-family:'Karla', sans-serif;
+    height:100vh;
+    background-color: var(--light_gray);
+    color:var(--light_gray);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display:grid;
+    width:85%;
+    margin:auto;
+    border-radius:0.3rem;
+    overflow: hidden;
+}
+.container > div {
+    padding:1.1rem 1.1rem;
+}
+.container > div > *{
+    padding:0.6rem 0.6rem;
+}
+.container h1{
+    font-size:1.1rem;
+}
+.welcome{
+    background-color: white;
+}
+.welcome h2{
+   font-size:1rem;
+   color:var(--bright_yellow);
+   font-weight:100;
+}
+.welcome h1{
+    color:var(--cyan);
+}
+.welcome p{
+    font-size:0.88rem;
+    line-height: 1.5rem;
+    color:hsl(215, 21%, 69%);
+}
+.subscription{
+    background-color: var(--cyan);
+}
+.subscription button{
+    width:calc(100% - 1.1rem);
+    max-width:350px;
+    display:block;
+    border-radius:0.2rem;
+    outline:none;
+    background-color:var(--bright_yellow);
+    border:none;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.219);
+    padding:0;
+    margin:1.2rem auto 0.5rem auto;
+}
+.subscription button a{
+    width:100%;
+    border-radius:inherit;
+    text-decoration:none;
+    display:block;
+    color:rgba(255, 255, 255, 0.887);
+    font-size:0.95rem;
+    height:100%;
+    padding:0.85rem;
+}
+.subscription strong{
+    font-size:2.1rem;
+    vertical-align:middle;
+    padding-right:0;
+}
+.subscription span{
+   font-size:1rem;
+   color:rgba(255, 255, 255, 0.614);
+   font-weight:200;
+   padding:0 0.48rem;
+}
+.about{
+    background-color:hsla(179, 62%, 43%, 0.791);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* list header */
+ul:before{
+    content:attr(aria-label);
+    font-size:1.2rem;
+    color:white;
+}
+ul li{
+    list-style-type: none;
+    font-size:0.87rem;
+    font-weight:100;
+    color:rgba(255, 255, 255, 0.651);
+    padding:0.12rem 0;
+}
+li:first-child{
+    padding-top:0.8rem;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:300px){
+    .container > div{
+        padding:0.4rem 0.4rem;
+    }
+    .container{
+        width:100%;
+    }
 }
